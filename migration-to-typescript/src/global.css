@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'PT Serif Pro';
+    src: url('./assets/fonts/PTSerifPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('./assets/fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('./assets/fonts/HelveticaNeueCyr-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    background: #222222;
+    font-family: sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+.page-wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .page-wrapper {
+    position: relative;
+    padding-top: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-family: "PT Serif Pro", serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 53px;
+    text-align: center;
+    border-bottom: 1px solid rgb(140, 140, 140);
+}
+
+.page-header__headline {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEEEEE;;
+}
+
+footer .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.page-footer__title {
+    margin: 0;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-family: "HelveticaNeueCyr";
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13px;
+    border-bottom: 1px solid #292929;
+    color: #292929;
+    grid-column: 1 / -1;
+}
+
+.page-footer__links {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-footer__year {
+    margin: 0;
+    color: black;
+    font-family: 'HelveticaNeueCyr';
+    font-weight: bold;
+}
+
+footer .copyright {
+    text-align: right;
+    margin: 0;
+    font-family: 'HelveticaNeueCyr';
+    font-size: 13px;
+    line-height: 130%;
+    font-weight: 400;
+    color: #292929;
+}
+footer .copyright a {
+    color: #292929;
+}
+footer .copyright a:hover {
+    color: #555;
+}
+
+@media (min-width: 680px) {
+    .page-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    header h1 {
+        font-size: 57px;
+        font-weight: 700;
+        line-height: 76px;
+        text-align: center;
+        border-bottom: 1px solid rgb(140, 140, 140);
+    }
+    
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    font-family: 'HelveticaNeueCyr';
+    font-size: 13px;
+    line-height: 130%;
+    font-weight: 400;
+    color: #292929;
+    text-decoration: none;
+}
+
+.link__site-logo {
+    fill: #EEEEEE;
+}
