@@ -1,0 +1,45 @@
+.modal {
+  position: absolute;
+  inset: 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: auto;
+    padding: 40px 30px 20px 30px;
+    color: var(--additional-color-9);
+    background-color: var(--additional-color-5);
+    border-radius: 40px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3), 1px 3px 6px 2px rgba(0, 0, 0, 0.15);
+  }
+
+  &__button {
+    background-color: var(--additional-color-2);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    li {
+      background-color: var(--additional-color-2);
+      border-radius: 3px;
+      padding: 3px 10px;
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+  }
+}

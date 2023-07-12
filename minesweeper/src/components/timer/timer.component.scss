@@ -1,0 +1,19 @@
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  user-select: none;
+
+  &__minutes {
+    order: 1;
+  }
+
+  &__seconds {
+    order: 3;
+  }
+
+  &__divider {
+    order: 2;
+    margin: 0;
+  }
+}

@@ -1,0 +1,116 @@
+.minesweeper {
+  --main-color-1: #000000;
+  --main-color-2: #ffffff;
+
+  --additional-color-1: #FFFBFE;
+  --additional-color-2: #EEE8F4;
+  --additional-color-3: #E6E1E5;
+  --additional-color-4: #D0C4C4;
+  --additional-color-5: #E8DEF8;
+  --additional-color-6: #D0BCFF;
+  --additional-color-7: #6750A4;
+  --additional-color-8: #4A4458;
+  --additional-color-9: #49454F;
+  --additional-color-10: #302D38;
+  --additional-color-11: #1C1B1F;
+
+  --accent-color-1: #FF6695;
+  --accent-color-2: #009959;
+  --accent-color-3: #4E8EEE;
+}
+
+.minesweeper.theme-dark {
+  --main-color-1: #E6E1E5;
+  --additional-color-1: #1C1B1F;
+  --additional-color-2: #302D38;
+  --additional-color-4: #49454F;
+  --additional-color-5: #4A4458;
+  --additional-color-6: #6750A4;
+  --additional-color-7: #D0BCFF;
+  --additional-color-9: #E8DEF8;
+  --additional-color-10: #D0C4C4;
+  --additional-color-11: #E8DEF8;
+}
+
+.minesweeper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 10px 10px 10px;
+  margin: auto 5px;
+  max-width: 690px;
+  min-width: 1px;
+  background-color: var(--additional-color-1);
+  box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  user-select: none;
+
+  &__button-group {
+    display: flex;
+    gap: 5px;
+
+    @media (max-width:699px) {
+      margin-right: 55px;
+    }
+  }
+
+  &__button-list {
+    position: absolute;
+    right: 0;
+    display: flex;
+    
+    align-items: center;
+    gap: 5px;
+    
+    border-radius: 20px;
+
+    li:last-of-type {
+      display: none;
+    }
+
+    @media (max-width:699px) {
+      flex-direction: column;
+      background-color: var(--additional-color-6);
+
+      li:last-of-type {
+        display: inline-flex;
+      }
+
+      li {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+  
+      &:focus-within {
+        li {
+          position: relative;
+        }
+        li:last-of-type {
+          order: -1;
+        }
+      };
+    }
+  }
+
+  &__info-bar {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    gap: 20px;
+  }
+  
+  &__board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  &__tile-row {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+  }
+}

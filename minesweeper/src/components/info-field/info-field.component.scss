@@ -1,0 +1,25 @@
+.info-field {
+  margin: 0;
+  display: inline-flex;
+  gap: 5px;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: relative;
+  pointer-events: none;
+
+  &__value {
+    padding: 10px 16px;
+    background-color: var(--additional-color-1);
+    border: 1px solid var(--additional-color-4);
+    border-radius: 8px;
+    color: var(--main-color-1);
+  }
+
+  &__label {
+    position: absolute;
+    bottom: -30%;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: var(--additional-color-9);
+  }
+}

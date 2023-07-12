@@ -1,0 +1,66 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  border-style: none;
+  border-radius: 20px;
+  background-color: var(--additional-color-5);
+  font-family: inherit;
+  color: var(--additional-color-9);
+  font-size: 14px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition-property: background, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+
+  &--icon {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  &--growable {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  svg {
+    flex-shrink: 0;
+    fill: var(--additional-color-7);
+  }
+
+  &:hover {
+    background-color: var(--additional-color-6);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.theme-dark .night{
+  display: none;
+}
+
+.theme-day .day{
+  display: none;
+}
+
+.unmuted {
+  .unmute {
+    display: none;
+  }
+
+  .mute {
+    display: inline;
+  }
+}
+
+.muted {
+  .mute {
+    display: none;
+  }
+  
+  .unmute {
+    display: inline;
+  }
+} 
