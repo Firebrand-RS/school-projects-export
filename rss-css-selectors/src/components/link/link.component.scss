@@ -1,0 +1,18 @@
+.link {
+  cursor: pointer;
+  &--contact-icon {
+    svg {
+      display: block;
+      height: 24px;
+      fill: var(--main-color-4);
+    }
+
+    :hover {
+      fill: var(--main-color-3);
+    }
+
+    :active {
+      fill: var(--main-color-2);
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.editor {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--main-color-10);
+  border-radius: 4px;
+
+  &__css-editor,
+  &__html-viewer {
+    flex-grow: 1;
+    max-width: 50%;
+  }
+}
+
+.code-view {
+  display: flex;
+  flex-direction: column;
+  font-family: Consolas, monospace;
+  color: var(--main-color-4);
+  background-color: var(--main-color-7);
+
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__title,
+  &__filename {
+    font-size: 14px;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__field {
+    display: flex;
+    flex-grow: 1;
+    font-size: 12px;
+
+    @media (min-width: 1025px) {
+      font-size: 15px;
+    }
+  }
+
+  &__field-stroke-numbers-column {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    line-height: 115%;
+    text-align: right;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__field-strokes-column {
+    flex-grow: 1;
+    padding: 10px;
+    line-height: 115%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: hidden;
+    cursor: default;
+
+    .children-wrapper {
+      padding-left: 10px;
+
+      @media (min-width: 1024px) {
+        padding-left: 15px;
+      }
+    }
+
+    .lightup {
+      background-color: var(--main-color-6);
+    }
+  }
+
+  &__css-note {
+    white-space: pre-wrap;
+  }
+
+  &__selector-field {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: calc(1em * 1.15);
+    
+
+    input {
+      border-style: none;
+      padding: 0;
+      flex-grow: 1;
+      width: 1px;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+      background: rgba(62,203,255,.3);
+      animation: input .5s infinite;
+      margin-right: 7em;
+
+      &::placeholder {
+        font-family: Consolas, monospace;
+      }
+
+      &:focus {
+        outline-style: none;
+      }
+    }
+  }
+
+  &__input-stroke-buttons {
+    position: absolute;
+    display: flex;
+    gap: 2px;
+    right: 0;
+  }
+
+  &--light {
+    .code-view__field-stroke-numbers-column {
+      background-color: var(--main-color-2);
+    }
+    .code-view__field-strokes-column {
+      background-color: var(--main-color-1);
+    }
+  }
+
+  &--dark {
+    .code-view__field-stroke-numbers-column {
+      background-color: var(--main-color-10);
+    }
+    .code-view__field-strokes-column {
+      background-color: var(--main-color-10);
+    }
+  }
+}
+
+.attribute,
+.string,
+.section {
+  pointer-events: none;
+}
+
+.string {
+  color: #d2917a;
+}
+.attribute {
+  color: #76dbfc;
+}
+
+.section {
+  color: #4c9bd3;
+}
